@@ -24,7 +24,7 @@ function getLog(req, res) {
         let logs = mensagem.map(e => e.split(' '))
         let mensagemLog
 
-        let uou = () => {
+        let verificaLog = () => {
             for (let i = 0; i < logs.length; i++) {
                 if (logs[i].includes(id)) {
                     mensagemLog = logs[i].join(' ')
@@ -37,7 +37,7 @@ function getLog(req, res) {
             }
             return false
         }
-        if (uou()) {
+        if (verificaLog()) {
             res.status(200).send(`Log encontrado: ${mensagemLog} `)
         } else {
             res.status(404).send('ID não encontrado')

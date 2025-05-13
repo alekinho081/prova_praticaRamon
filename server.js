@@ -12,8 +12,12 @@ function addLog (req, res) {
     res.status(201).send(`ID gerado: ${id}, mensagem adicionada ao arquivo de logs com sucesso`)
 }
 
-
-
+function getLog(req, res) {
+    const id = req.param
+    const data = fs.readFileSync('./logs.txt').toString()
+    const mensagem = data.split('\n')
+    
+}
 
 app.use(express.json())
 

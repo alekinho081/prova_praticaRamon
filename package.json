@@ -1,0 +1,11 @@
+{
+  "name": "prova_praticaramon",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
